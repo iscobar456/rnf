@@ -1,0 +1,55 @@
+{
+  "name": "rnf",
+  "version": "1.0.0",
+  "description": "A blank template to get started with Payload 3.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.744.0",
+    "@faker-js/faker": "^9.4.0",
+    "@payloadcms/db-sqlite": "3.21.0",
+    "@payloadcms/next": "3.21.0",
+    "@payloadcms/payload-cloud": "3.21.0",
+    "@payloadcms/richtext-lexical": "3.21.0",
+    "@payloadcms/storage-s3": "3.21.0",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.10.0",
+    "lexical": "0.21.0",
+    "libsql": "0.5.0-pre.5",
+    "next": "15.1.0",
+    "payload": "3.21.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sharp": "0.33.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.13.1",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "eslint": "^9.20.0",
+    "eslint-config-next": "15.1.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}

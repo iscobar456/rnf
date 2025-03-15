@@ -1,0 +1,114 @@
+.navbar {
+  display: flex;
+  padding: 1.1rem 1.66rem;
+  gap: 1.66rem;
+  width: 100%;
+  border-bottom: 1px solid var(--gray);
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.brand {
+  font-size: 39px;
+  display: flex;
+  align-items: center;
+  gap: 1.33rem;
+  margin-right: auto;
+}
+
+.brand h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
+}
+
+.navLogo {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+}
+
+.navLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navLinks {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-size: 2.4rem;
+  font-family: var(--font-oswald);
+}
+
+.donateButton {
+  background-color: var(--accent);
+  padding: 6px 20px 10px 20px;
+  border-radius: 1px;
+  text-decoration: none;
+  font-family: var(--font-oswald);
+  font-size: 2.4rem;
+  display: block;
+  line-height: 32px;
+  color: #fff;
+  width: min-content;
+}
+
+.footer {
+  padding: 2rem;
+  text-align: left;
+  background-color: #2E2F33;
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.footer > div {
+  width: var(--content-width);
+  margin: auto;
+}
+
+.footer .brand {
+  font-size: 2rem;
+}
+
+.footer hr {
+  background-color: var(--gray);
+  margin: 1rem 0;
+}
+
+.footerLogo {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+}
+
+.footerLogo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.footerSocials svg {
+  width: 24px;
+  height: 24px;
+}

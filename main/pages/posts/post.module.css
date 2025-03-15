@@ -1,0 +1,92 @@
+.postPage {
+    width: var(--content-width);
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.postHeading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.postHeading h1 {
+    font-size: 2.2rem;
+    font-family: var(--font-open-sans);
+    font-weight: 500;
+}
+
+.postHeading p {
+    font-size: 1.5rem;
+}
+
+.postHeadingImage {
+    width: 100%;
+    height: 60vh;
+}
+
+.postHeadingImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postPage hr {
+    width: 100%;
+    height: 1.5px;
+    border: 0;
+    background: var(--gray);
+    margin: 1.5rem 0;
+}
+
+.postBody {
+    display: grid;
+    gap: 4rem;
+    grid-template: auto auto / 1fr 3fr 1fr;
+    grid-template-areas:
+        "left-margin content socials"
+        "left-margin content right-margin";
+    
+}
+
+.postContent {
+    grid-area: content;
+    font-size: 1.5rem;
+    line-height: 180%;
+}
+
+.postSocials {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.postSocials h3 {
+    font-family: var(--font-open-sans);
+    font-weight: 500;
+}
+
+.postSocials p {
+    font-size: 1.3rem;
+    line-height: 130%;
+}
+
+.postSocials > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.postSocials .postSocialsIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+.postSocials .postSocialsIcons svg {
+    width: 24px;
+    height: 24px;
+}
