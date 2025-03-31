@@ -2,7 +2,7 @@ import { spawn } from "child_process";
 import { copyTypes, dumpPosts } from "@/logic/export";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (req: NextRequest, res: NextResponse) => {
+export const GET = async (req: NextRequest) => {
     dumpPosts();
     copyTypes();
 
