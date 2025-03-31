@@ -1,8 +1,8 @@
-import { NextApiHandler } from "next";
 import { spawn } from "child_process";
 import { copyTypes, dumpPosts } from "@/logic/export";
+import { NextRequest, NextResponse } from "next/server";
 
-export const GET: NextApiHandler = async (req, res) => {
+export const GET = async (req: NextRequest, res: NextResponse) => {
     dumpPosts();
     copyTypes();
 
@@ -51,4 +51,4 @@ export const GET: NextApiHandler = async (req, res) => {
 
 export const config = {
     runtime: "edge",
-  };
+};
