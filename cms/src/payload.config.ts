@@ -24,7 +24,7 @@ export default buildConfig({
     },
     components: {
       actions: [
-        '/components/BuildTrigger/index.tsx#BuildTrigger'
+        '/components/BuildManager.tsx#BuildManager'
       ]
     }
   },
@@ -53,10 +53,10 @@ export default buildConfig({
       bucket: process.env.S3_BUCKET as string,
       config: {
         credentials: {
-          accessKeyId: process.env.S3_ACCESS_KEY_ID as string,
-          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY as string,
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
         },
-        region: process.env.S3_REGION,
+        region: process.env.AWS_DEFAULT_REGION,
         // ... Other S3 configuration
       },
     }),

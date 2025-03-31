@@ -13,7 +13,7 @@ export const dumpPosts = async () => {
     collection: 'posts',
     depth: 2,
   })
-  const fileName = 'index_props.json'
+  const fileName = 'posts.json'
   writeFile(
     path.join(process.cwd(), 'data', fileName),
     JSON.stringify(posts),
@@ -32,7 +32,7 @@ export const copyTypes = async () => {
   const typesFileStr = typesFile.toString();
   const modifiedTypesFileStr = typesFileStr.split('\n').slice(0, -3).join('\n');
   return writeFilePromise(
-    path.join(process.cwd(), 'data/payload-types.ts'),
+    path.join(process.cwd(), 'data/types.ts'),
     modifiedTypesFileStr,
   )
 }

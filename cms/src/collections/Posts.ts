@@ -1,6 +1,7 @@
-import { BeforeChangeHook } from 'node_modules/payload/dist/collections/config/types'
+import { BeforeChangeHook, AfterChangeHook } from 'node_modules/payload/dist/collections/config/types'
 import type { CollectionConfig } from 'payload'
 import { slugify } from '@/logic/slugify'
+import { exportPages } from 'next/dist/export/worker'
 
 const updateDatePublished: BeforeChangeHook = async ({ data, originalDoc }) => {
   if (originalDoc.isDraft && !data.isDraft) {
