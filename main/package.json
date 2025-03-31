@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@payloadcms/richtext-lexical": "^3.31.0",
     "next": "15.1.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "richtext-lexical-custom": "link:../richtext-lexical-custom"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
