@@ -5,7 +5,7 @@ cp data/* $RNF_MAIN_DIR/payload-exports/
 cd $RNF_MAIN_DIR
 
 NODE_ENV=production
-pnpm build
+npm run build
 
 # Copy the built files to AWS S3 bucket
 source ../cms/.env

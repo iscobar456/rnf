@@ -11,7 +11,7 @@ if [[ -z $(docker container ls -a | grep rnf) ]]; then
   # Reset the ownership of the db directory to match the user and group inside the container
   # This is necessary to ensure that the container can read and write to the db directory
   echo "Resetting ownership of the db directory..."
-  sudo chgrp -R $(docker run --rm rnf id -u):$(docker run --rm rnf id -g) ./db
+  sudo chown -R $(docker run --rm rnf id -u):$(docker run --rm rnf id -g) ./db
 
 elif [[ $(docker container ls | grep rnf) ]]; then
   echo "Container already running."

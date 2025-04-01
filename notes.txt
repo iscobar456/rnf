@@ -1,0 +1,2 @@
+# use this to push build
+rsync -avz -e "ssh -i ~/.ssh/id_rsa" .next/ rnf-server:rnf/cms/.next/
