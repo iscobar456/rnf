@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from './navbar.module.css'
 import Logo from '@/public/img/rnf_logo_3.png'
-import MenuIcon from '@/public/menu-icon.svg' // Ensure this path is correct
+import MenuIcon from '@/public/img/menu-icon.svg' // Ensure this path is correct
+import CloseIcon from '@/public/img/arrow-up.svg' // Ensure this path is correct
 import DonateButton from '../buttons/DonateButton'
 import { useState } from 'react'
 
@@ -10,8 +11,25 @@ import { useState } from 'react'
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Function to handle clicks outside the menu to close it
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement
+    const menu = document.querySelector(`.${styles.navbar}`)
+    console.log(target, menu, isMenuOpen)
+    if (menu && !menu.contains(target)) {
+      setIsMenuOpen(false)
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+    console.log(isMenuOpen)
+    if (!isMenuOpen) {
+      document.addEventListener('click', handleClickOutside)
+    } else {
+      document.removeEventListener('click', handleClickOutside)
+    }
   }
 
   return (
@@ -28,7 +46,7 @@ export default function Navbar() {
         aria-label="Toggle menu"
       >
         <Image
-          src={MenuIcon}
+          src={isMenuOpen ? CloseIcon : MenuIcon}
           alt="Menu Icon"
           width={30}
           height={30}

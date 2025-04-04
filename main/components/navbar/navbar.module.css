@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.66rem;
+  height: 6rem;
   width: 100%;
   position: sticky;
   top: 0;
@@ -16,7 +17,8 @@
   align-items: center;
   gap: 1.33rem;
   margin-right: auto;
-  padding: 1.1rem 0 1.1rem 1.66rem;
+  padding-left: 1.66rem;
+  height: 100%
 }
 
 .brand h1 {
@@ -41,28 +43,40 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+  gap: 1.66rem;
+
+  position: absolute;
+  height: 0;
+  width: 100%;
+  padding: 0 1.66rem;
+  top: 6rem;
+  overflow: hidden;
+  
+  background-color: white;
   list-style: none;
   font-size: 2.4rem;
   font-family: var(--font-oswald);
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  transition: height 0.3s ease-in-out;
-  padding: 0 1.66rem;
+
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out,
+    border-bottom 0.3s step-end;
+}
+
+.navLinks.show {
+  display: flex;
+  height: 172px;
+  padding: 1.66rem;
+  border-bottom: 1px solid var(--gray);
+  transition:
+    height 0.3s ease-in-out,
+    padding 0.3s ease-in-out,
+    border-bottom 0.3s step-end;
 }
 
 .navLinks li {
   display: flex;
   justify-content: end;
-  margin-bottom: 1.66rem;
-}
-
-.navLinks.show {
-  display: flex;
-  height: 160px;
-  border-top: 1px solid var(--gray);
-  transition: height 0.3s ease-in-out;
 }
 
 .menuToggle {
@@ -82,16 +96,14 @@
     
   }
 
-  .brand h1 {
-    display: block;
-  }
-
   .navLinks {
     flex-direction: row;
     gap: 4rem;
     height: max-content;
     width: unset;
-    padding: 1.1rem 1.66rem 1.1rem 0;
+    margin: auto 0;
+    position: relative;
+    top: 0;
   }
 
   .menuToggle {
@@ -100,5 +112,11 @@
 
   .navLinks li {
     margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .brand h1 {
+    display: block; /* Show the brand title on larger screens */
   }
 }

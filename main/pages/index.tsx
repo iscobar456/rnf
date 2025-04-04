@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import headerImage from '@/public/img/header-background.jpg'
 import aboutUsImage from '@/public/img/about-us.jpeg'
+import CornerRightDown from '@/public/img/corner-right-down.svg'
 import Link from 'next/link'
 import styles from '@/styles/index.module.css'
 import { PostList, DeepPost } from '@/components/posts'
@@ -26,13 +27,19 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
       <div className={styles.page}>
         <header className={styles.header}>
           <Image src={headerImage} alt="Header Background" fill className={styles.headerImage} />
-          <p>
+          <p className={styles.desktopBanner}>
             Focused on community needs, the Rwanda Nurture Foundation helps single mothers learn
             skills that enhance family well-being.
           </p>
+          <div className={styles.mobileBanner}>
+            <h1>Rwanda Nurture Foundation</h1>
+            <p>
+              Focused on helping single mothers learn skills that enhance family well-being.
+            </p>
+          </div>
         </header>
         <section className={styles.postsSection}>
-          <h2>See What We&apos;ve Been Doing</h2>
+          <h2>What We&apos;re Doing <Image src={CornerRightDown} alt='Corner right down'/></h2>
           <PostList posts={posts} />
         </section>
         <section id="about" className={styles.aboutSection}>
