@@ -42,7 +42,7 @@
 .navLinks {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 1.66rem;
 
   position: absolute;
@@ -76,7 +76,7 @@
 
 .navLinks li {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .menuToggle {
