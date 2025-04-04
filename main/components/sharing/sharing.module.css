@@ -1,0 +1,34 @@
+.sharePost {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.sharePost h3 {
+    font-family: var(--font-open-sans);
+    font-weight: 500;
+}
+
+.sharePost p {
+    font-size: 1.3rem;
+    line-height: 130%;
+}
+
+.sharePost > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.sharePost .sharePostIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sharePost .sharePostIcons svg {
+    width: 24px;
+    height: 24px;
+}
