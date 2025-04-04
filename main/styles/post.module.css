@@ -1,8 +1,9 @@
 .postPage {
     width: var(--content-width);
-    margin: 2rem auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 4rem;
 }
 
 .postHeading {
@@ -16,10 +17,12 @@
     font-size: 2.2rem;
     font-family: var(--font-open-sans);
     font-weight: 500;
+    padding-left: 2rem;
 }
 
 .postHeading p {
     font-size: 1.5rem;
+    padding-left: 2rem;
 }
 
 .postHeadingImage {
@@ -42,13 +45,10 @@
 }
 
 .postBody {
-    display: grid;
-    gap: 4rem;
-    grid-template: auto auto / 1fr 3fr 1fr;
-    grid-template-areas:
-        "left-margin content socials"
-        "left-margin content right-margin";
-    
+    display: flex;
+    position: relative;
+    padding: 0 6rem 0 2rem;
+
 }
 
 .postContent {
@@ -58,11 +58,8 @@
 }
 
 .postSocials {
-    grid-area: socials;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
 }
 
 .postSocials h3 {
@@ -75,7 +72,7 @@
     line-height: 130%;
 }
 
-.postSocials > div {
+.postSocials>div {
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -89,4 +86,25 @@
 .postSocials .postSocialsIcons svg {
     width: 24px;
     height: 24px;
+}
+
+@media (min-width: 768px) {
+    .postBody {
+        display: grid;
+        gap: 4rem;
+        grid-template: auto auto / 1fr 3fr 1fr;
+        grid-template-areas:
+            "left-margin content socials"
+            "left-margin content right-margin";
+    }
+
+    .postSocials {
+        position: relative;
+        right: unset;
+        grid-area: socials;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
 }

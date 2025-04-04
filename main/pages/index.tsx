@@ -1,13 +1,12 @@
 import Image from 'next/image'
 import headerImage from '@/public/img/header-background.jpg'
-import aboutUsImage from '@/public/img/about-us.jpeg'
 import CornerRightDown from '@/public/img/corner-right-down.svg'
-import Link from 'next/link'
 import styles from '@/styles/index.module.css'
 import { PostList, DeepPost } from '@/components/posts'
 import RootLayout from './layout'
 import { promises as fs } from 'fs'
 import path from 'path'
+import DonateButton from '@/components/buttons/DonateButton'
 
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'payload-exports/posts.json')
@@ -44,21 +43,16 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
         </section>
         <section id="about" className={styles.aboutSection}>
           <div className="layout">
-            <h2 className={styles.aboutHeader}>About Us</h2>
-            <div className={styles.aboutImage}>
-              <Image src={aboutUsImage} alt="About Us" height="300" width="300" />
-            </div>
-            <div className={styles.aboutContent}>
-              <p>
-                The Rwanda Nurture Foundation was officially launched on November 4, 2024, with a
-                mission to provide early childhood education and skills training for single mothers.
-                The foundation aims to foster both the intellectual and socio-economic development
-                of young children and empower single mothers by equipping them with practical
-                skills, such as sewing, to improve their livelihoods. With a strong focus on
-                community needs, the foundation targets single mothers eager to learn and gain
-                skills that will enhance their families&apos; well-being.
-              </p>
-            </div>
+            <h2>Our Mission</h2>
+            <p>
+              The Rwanda Nurture Foundation was officially launched on November 4, 2024, with a
+              mission to provide early childhood education and skills training for single mothers.
+              The foundation aims to foster both the intellectual and socio-economic development
+              of young children and empower single mothers by equipping them with practical
+              skills, such as sewing, to improve their livelihoods. With a strong focus on
+              community needs, the foundation targets single mothers eager to learn and gain
+              skills that will enhance their families&apos; well-being.
+            </p>
           </div>
         </section>
         <section id="donate" className={styles.donateSection}>
@@ -67,24 +61,7 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
             Every contribution goes towards early childhood educational expenses<br></br>
             or professional development opportunities for single mothers.
           </p>
-          <Link href="" className={styles.donateButton}>
-            Donate on PayPal
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z"
-              />
-            </svg>
-          </Link>
-          <Link href="" className={styles.donateButton}>
-            Donate on GoFundMe
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z"
-              />
-            </svg>
-          </Link>
+          <DonateButton/>
         </section>
       </div>
     </RootLayout>

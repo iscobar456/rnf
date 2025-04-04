@@ -73,14 +73,6 @@ export default function PostPage({ post }: PostProps) {
           </div>
           <div className={styles.postSocials}>
             <SharePost />
-            <div>
-              <h3>Contact</h3>
-              <p>
-                Email us at:
-                <br />
-                contact@rwandanurture.org
-              </p>
-            </div>
           </div>
         </div>
       </article>

@@ -1,22 +1,21 @@
 import Link from "next/link"
-import { FacebookIcon, XIcon, WhatsappIcon } from "../icons"
+import { FacebookIcon, XIcon, WhatsappIcon, ShareIcon } from "../icons"
 import { useEffect, useState } from "react"
 import styles from './sharing.module.css'
 
 
 interface ShareIconsProps {
-  className?: string
+  postUri: string
 }
 
-export const ShareIcons: React.FC<ShareIconsProps> = ({ className }) => {
-  const [postUri, setPostUri] = useState('')
+interface SharePostProps {
+  className?: string,
+}
 
-  useEffect(() => {
-    setPostUri(window.location.toString());
-  }, [])
 
+function ShareLinks({ postUri }: ShareIconsProps) {
   return (
-    <div className={className || styles.sharePostIcons}>
+    <div className={styles.sharePostIcons}>
       <Link
         href={'https://www.facebook.com/dialog/share?'
           + 'app_id='
@@ -35,12 +34,55 @@ export const ShareIcons: React.FC<ShareIconsProps> = ({ className }) => {
   )
 }
 
-
-export const SharePost: React.FC = () => {
+function MobileShareButton({ postUri }: ShareIconsProps) {
   return (
-    <div className={styles.sharePost}>
+    <button
+      className={styles.shareButton}
+      aria-label={"Share this post"}
+      onClick={() => {
+        if (navigator.share) {
+          navigator.share({
+            title: document.title,
+            text: "Check out this post!",
+            url: postUri,
+          }).catch((error) => {
+            console.error("Error sharing:", error)
+          })
+        } else {
+          alert("Sharing is not supported on this device.")
+        }
+      }}
+    >
+      <ShareIcon
+        width={18}
+        height={18}
+      />
+    </button>
+  )
+}
+
+export const ShareIcons: React.FC<ShareIconsProps> = ({ postUri }) => {
+  return typeof navigator.share === 'function' ? (
+    <MobileShareButton postUri={postUri} />
+  ) : (
+    <ShareLinks postUri={postUri} />
+  )
+}
+
+
+export const SharePost: React.FC<SharePostProps> = ({ className }) => {
+  const [postUri, setPostUri] = useState('')
+
+  useEffect(() => {
+    setPostUri(window.location.toString());
+  }, [])
+
+  return typeof navigator.share === 'function' ? (
+    <MobileShareButton postUri={postUri} />
+  ) : (
+    <div className={`${className} ${styles.sharePost}`}>
       <h3>Share</h3>
-      <ShareIcons />
+      <ShareIcons postUri={postUri} />
     </div>
   )
 }
