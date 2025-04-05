@@ -40,7 +40,7 @@ function MobileShareButton({ postUri }: ShareIconsProps) {
       className={styles.shareButton}
       aria-label={"Share this post"}
       onClick={() => {
-        if (navigator.share) {
+        if (typeof navigator.share === 'function') {
           navigator.share({
             title: document.title,
             text: "Check out this post!",
