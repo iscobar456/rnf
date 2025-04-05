@@ -1,10 +1,18 @@
 import type { NextConfig } from "next";
 
+console.log(process.env.NODE_ENV)
+
 const nextConfig: NextConfig = {
   /* config options here */
   trailingSlash: true,
   reactStrictMode: true,
   output: 'export',
+  eslint: {
+    ignoreDuringBuilds: process.env.SERVER === "true",
+  },
+  typescript: {
+    ignoreBuildErrors: process.env.SERVER === "true",
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
