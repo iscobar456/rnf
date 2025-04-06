@@ -15,6 +15,8 @@ import { PostCategories } from './collections/PostCategories'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const mediaPrefix = process.env.S3_MEDIA_PREFIX || 'media'
+
 
 export default buildConfig({
   admin: {
@@ -46,8 +48,8 @@ export default buildConfig({
     s3Storage({
       collections: {
         media: {
-          prefix: 'media',
-          generateFileURL: ({ filename }) => process.env.MEDIA_BASE_URL + '/media/' + filename
+          prefix: mediaPrefix,
+          generateFileURL: ({ filename }) => process.env.MEDIA_BASE_URL + `/${mediaPrefix}/` + filename
         },
       },
       bucket: process.env.S3_BUCKET as string,
