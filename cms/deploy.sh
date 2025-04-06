@@ -6,7 +6,7 @@ cp data/* $RNF_FRONTEND/payload-exports/
 
 cd $RNF_FRONTEND
 
-NODE_ENV=production
+SERVER=true
 npm run build
 
 # Copy the built files to AWS S3 bucket
