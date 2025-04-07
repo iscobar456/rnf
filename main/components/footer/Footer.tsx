@@ -25,7 +25,6 @@ export default function Footer() {
         </div>
         <hr />
         <ul>
-          <li>Address: </li>
           <li>Email: contact@rwandanurture.org</li>
         </ul>
         <p>&copy; 2025 Rwanda Nurture Foundation. All rights reserved.</p>
