@@ -1,49 +1,45 @@
 .sharePost {
-    grid-area: socials;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 1.5px;
+    padding: 1rem 1.6rem;
+    margin: 1.5rem 0;
 }
 
-.sharePost h3 {
-    font-family: var(--font-open-sans);
-    font-weight: 500;
+.sharePost .text {
+    margin-right: auto;
 }
 
-.sharePost p {
-    font-size: 1.3rem;
-    line-height: 130%;
+.sharePost h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: .3rem;
 }
 
-.sharePost>div {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.sharePost .sharePostIcons {
+.shareLinks {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center;
 }
 
-.sharePost .sharePostIcons svg {
-    width: 24px;
-    height: 24px;
+.shareLinks svg {
+    height: 2rem;
+    width: 2rem;
 }
 
 .shareButton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    margin: auto 0;
     background-color: #007bff;
-    color: white;
     border: none;
+    color: white;
     border-radius: .5rem;
-    padding: 0.8rem 1.2rem;
-    font-size: 1.6rem;
-    font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -54,11 +50,4 @@
 
 .shareButton:active {
     transform: scale(0.95);
-}
-
-.shareButton img {
-    margin-left: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    fill: white;
 }

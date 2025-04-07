@@ -63,17 +63,14 @@ export default function PostPage({ post }: PostProps) {
           <div className={styles.postHeadingImage}>
             <Image src={post.featuredImage.url as string} width={1920} height={600} alt={post.featuredImage.alt} />
           </div>
-          <h1>{post.title}</h1>
-          <p>{formatDate(post.datePublished)}</p>
+          <div className={styles.postHeadingText}>
+            <h1>{post.title}</h1>
+            <p>{formatDate(post.datePublished)}</p>
+          </div>
         </div>
-        <hr />
         <div className={styles.postBody}>
-          <div className={styles.postContent}>
-            {<RichText data={post.content} />}
-          </div>
-          <div className={styles.postSocials}>
-            <SharePost />
-          </div>
+          {<RichText data={post.content} />}
+          <SharePost />
         </div>
       </article>
     </RootLayout>

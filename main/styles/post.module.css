@@ -1,28 +1,31 @@
 .postPage {
     width: var(--content-width);
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 4rem;
+    padding: 2rem;
+    margin: 0 auto;
 }
 
 .postHeading {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    border-bottom: 1px solid var(--gray);
+}
+
+.postHeadingText {
+    width: 100%;
+    margin: 1.5rem 0;
 }
 
 .postHeading h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-family: var(--font-open-sans);
     font-weight: 500;
-    padding-left: 2rem;
 }
 
 .postHeading p {
     font-size: 1.5rem;
-    padding-left: 2rem;
 }
 
 .postHeadingImage {
@@ -36,75 +39,16 @@
     object-fit: cover;
 }
 
-.postPage hr {
-    width: 100%;
-    height: 1.5px;
-    border: 0;
-    background: var(--gray);
-    margin: 1.5rem 0;
-}
-
 .postBody {
-    display: flex;
-    position: relative;
-    padding: 0 6rem 0 2rem;
-
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    font-size: 1rem;
 }
 
-.postContent {
-    grid-area: content;
-    font-size: 1.5rem;
-    line-height: 180%;
-}
-
-.postSocials {
-    position: absolute;
-    right: 0;
-}
-
-.postSocials h3 {
-    font-family: var(--font-open-sans);
-    font-weight: 500;
-}
-
-.postSocials p {
-    font-size: 1.3rem;
-    line-height: 130%;
-}
-
-.postSocials>div {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.postSocials .postSocialsIcons {
-    display: flex;
-    gap: 1rem;
-}
-
-.postSocials .postSocialsIcons svg {
-    width: 24px;
-    height: 24px;
-}
 
 @media (min-width: 768px) {
     .postBody {
-        display: grid;
-        gap: 4rem;
-        grid-template: auto auto / 1fr 3fr 1fr;
-        grid-template-areas:
-            "left-margin content socials"
-            "left-margin content right-margin";
-    }
-
-    .postSocials {
-        position: relative;
-        right: unset;
-        grid-area: socials;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        font-size: 1.5rem;
+        width: 768px;
     }
 }
