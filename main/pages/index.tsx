@@ -38,7 +38,7 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
           </div>
         </header>
         <section className={styles.postsSection}>
-          <h2>What We&apos;re Doing <Image src={CornerRightDown} alt='Corner right down'/></h2>
+          <h2>Recent News <Image src={CornerRightDown} alt='Corner right down' /></h2>
           <PostList posts={posts} />
         </section>
         <section id="about" className={styles.aboutSection}>
@@ -61,7 +61,7 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
             Every contribution goes towards early childhood educational expenses<br></br>
             or professional development opportunities for single mothers.
           </p>
-          <DonateButton/>
+          <DonateButton />
         </section>
       </div>
     </RootLayout>

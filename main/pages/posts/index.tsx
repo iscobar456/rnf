@@ -23,7 +23,7 @@ function FeaturedSection({ urlSlug, featuredImage, excerpt, title }: FeaturedSec
       <div className={styles.featuredInfo}>
         {/* <p className={styles.featuredLabel}>Featured</p> */}
         <Link href={`/posts/${urlSlug}`}>
-          <h1 className={styles.featuredTitle}>{title}</h1>
+          <h1 className={styles.featuredTitle}><span>Featured:</span> {title}</h1>
         </Link>
         <p className={styles.featuredExcerpt}>{excerpt}</p>
       </div>
