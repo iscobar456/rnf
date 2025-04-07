@@ -25,7 +25,7 @@
 }
 
 .postHeading p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .postHeadingImage {
@@ -42,10 +42,15 @@
 .postBody {
     width: 100%;
     max-width: 768px;
-    margin: auto;
+    margin: 3rem auto;
     font-size: 1rem;
 }
 
+.postBody p {
+    font-size: 1.3rem;
+    line-height: 160%;
+    margin-bottom: .5rem;
+}
 
 @media (min-width: 768px) {
     .postBody {
