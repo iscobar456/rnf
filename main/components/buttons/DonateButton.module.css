@@ -1,6 +1,7 @@
 .donateButton {
   background-color: var(--accent);
   padding: 6px 20px 10px 20px;
+  border: none;
   border-radius: 1px;
   text-decoration: none;
   font-family: var(--font-oswald);
@@ -9,4 +10,49 @@
   line-height: 32px;
   color: #fff;
   width: min-content;
+}
+
+.modalDialog {
+  top: 20vh;
+  width: 35vw;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: .7rem solid var(--accent);
+}
+
+.modalDialog::backdrop {
+  background-color: #00000048;
+}
+
+.modalDialog .header {
+  display: flex;
+}
+
+.modalDialog .header h2 {
+  font-size: 2rem;
+  font-family: var(--font-open-sans);
+}
+
+.modalDialog .header button {
+  margin-left: auto;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.modalDialog .header svg {
+  color: #000;
+  width: 2.5rem;
+}
+
+.modalDialog p {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 150%;
+}
+
+.modalDialog a {
+  text-decoration: underline;
 }

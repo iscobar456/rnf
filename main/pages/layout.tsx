@@ -27,6 +27,9 @@ export default function RootLayout({
       <Navbar />
       {children}
       <Footer />
+      <dialog id="donate-dialogue">
+        We are currently working on our payments system. ...
+      </dialog>
     </div>
   )
 }

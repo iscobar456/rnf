@@ -19,7 +19,7 @@
   z-index: 23;
   color: #fff;
   font-family: var(--font-open-sans);
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 150%;
   background-color: var(--secondary-transparent-dark);
   position: relative;
@@ -133,7 +133,7 @@
     left: 0;
     color: #fff;
     font-family: var(--font-open-sans);
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 150%;
     background-color: var(--secondary-transparent);
   }

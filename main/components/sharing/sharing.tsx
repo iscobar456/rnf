@@ -20,9 +20,11 @@ function ShareLinks({ postUri }: ShareIconsProps) {
         target='_blank'>
         <FacebookIcon width={18} height={18} />
       </Link>
+      {/*
       <Link href={`https://x.com/intent/tweet?url=${encodeURI(postUri)}`} target='_blank'>
         <XIcon width={18} height={18} />
       </Link>
+      */}
       <Link href={`https://api.whatsapp.com/send?text=${encodeURI(postUri)}`} target='_blank'>
         <WhatsappIcon width={18} height={18} />
       </Link>

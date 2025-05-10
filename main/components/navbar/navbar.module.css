@@ -51,27 +51,27 @@
   padding: 0 1.66rem;
   top: 6rem;
   overflow: hidden;
-  
+
   background-color: white;
   list-style: none;
   font-size: 2.4rem;
   font-family: var(--font-oswald);
 
   transition:
-    height 0.3s ease-in-out,
-    padding 0.3s ease-in-out,
-    border-bottom 0.3s step-end;
+    height 0.15s ease-in-out,
+    padding 0.15s ease-in-out,
+    border-bottom 0.15s step-end;
 }
 
 .navLinks.show {
   display: flex;
-  height: 172px;
+  height: 202px;
   padding: 1.66rem;
   border-bottom: 1px solid var(--gray);
   transition:
-    height 0.3s ease-in-out,
-    padding 0.3s ease-in-out,
-    border-bottom 0.3s step-end;
+    height 0.15s ease-in-out,
+    padding 0.15s ease-in-out,
+    border-bottom 0.15s step-end;
 }
 
 .navLinks li {
@@ -92,9 +92,7 @@
 }
 
 @media (min-width: 576px) {
-  .navbar {
-    
-  }
+  .navbar {}
 
   .navLinks {
     flex-direction: row;
@@ -107,7 +105,8 @@
   }
 
   .menuToggle {
-    display: none; /* Hide the menu toggle on larger screens */
+    display: none;
+    /* Hide the menu toggle on larger screens */
   }
 
   .navLinks li {
@@ -117,6 +116,7 @@
 
 @media (min-width: 768px) {
   .brand h1 {
-    display: block; /* Show the brand title on larger screens */
+    display: block;
+    /* Show the brand title on larger screens */
   }
 }

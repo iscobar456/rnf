@@ -27,11 +27,11 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
         <header className={styles.header}>
           <Image src={headerImage} alt="Header Background" fill className={styles.headerImage} />
           <p className={styles.desktopBanner}>
-            Focused on community needs, the Rwanda Nurture Foundation helps single mothers learn
+            Focused on community needs, Rwanda Nurture helps single mothers learn
             skills that enhance family well-being.
           </p>
           <div className={styles.mobileBanner}>
-            <h1>Rwanda Nurture Foundation</h1>
+            <h1>Rwanda Nurture</h1>
             <p>
               Focused on helping single mothers learn skills that enhance family well-being.
             </p>
@@ -45,13 +45,13 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
           <div className="layout">
             <h2>Our Mission</h2>
             <p>
-              The Rwanda Nurture Foundation was officially launched on November 4, 2024, with a
+              The Rwanda Nurture Organization was officially launched on November 4, 2024, with a
               mission to provide early childhood education and skills training for single mothers.
-              The foundation aims to foster both the intellectual and socio-economic development
+              The organization aims to foster both the intellectual and socio-economic development
               of young children and empower single mothers by equipping them with practical
               skills, such as sewing, to improve their livelihoods. With a strong focus on
-              community needs, the foundation targets single mothers eager to learn and gain
-              skills that will enhance their families&apos; well-being.
+              community needs, Rwanda Nurture focuses on single mothers eager to learn and gain
+              important skills
             </p>
           </div>
         </section>

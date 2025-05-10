@@ -15,7 +15,6 @@ export default function Navbar() {
   const handleClickOutside = (event: MouseEvent) => {
     const target = event.target as HTMLElement
     const menu = document.querySelector(`.${styles.navbar}`)
-    console.log(target, menu, isMenuOpen)
     if (menu && !menu.contains(target)) {
       setIsMenuOpen(false)
       document.removeEventListener('click', handleClickOutside)
@@ -24,7 +23,6 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
-    console.log(isMenuOpen)
     if (!isMenuOpen) {
       document.addEventListener('click', handleClickOutside)
     } else {
@@ -36,9 +34,9 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.brand}>
         <Link href="/" className={styles.navLogo}>
-          <Image src={Logo} fill alt="Rwanda Nurture Foundation logo" />
+          <Image src={Logo} fill alt="Rwanda Nurture Organization logo" />
         </Link>
-        <h1>Rwanda Nurture Foundation</h1>
+        <h1>Rwanda Nurture</h1>
       </div>
       <button
         className={styles.menuToggle}

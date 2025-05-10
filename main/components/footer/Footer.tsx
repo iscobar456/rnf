@@ -11,9 +11,9 @@ export default function Footer() {
       <div>
         <div className={styles.brand}>
           <div className={styles.footerLogo}>
-            <Image src={Logo} fill alt="Rwanda Nurture Foundation logo" />
+            <Image src={Logo} fill alt="Rwanda Nurture logo" />
           </div>
-          <h3>Rwanda Nurture Foundation</h3>
+          <h3>Rwanda Nurture</h3>
           <div className={styles.footerSocials}>
             <Link href="https://www.facebook.com/share/165DGinVkr/" target='_blank'>
               <FacebookIcon width={19} height={18} grayscale={true} />
@@ -27,7 +27,7 @@ export default function Footer() {
         <ul>
           <li>Email: contact@rwandanurture.org</li>
         </ul>
-        <p>&copy; 2025 Rwanda Nurture Foundation. All rights reserved.</p>
+        <p>&copy; 2025 Rwanda Nurture Organization. All rights reserved.</p>
       </div>
     </footer>
   )
