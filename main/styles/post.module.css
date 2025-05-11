@@ -2,7 +2,7 @@
     width: var(--content-width);
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 4rem;
     margin: 0 auto;
 }
 

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import headerImage from '@/public/img/header-background.jpg'
 import CornerRightDown from '@/public/img/corner-right-down.svg'
 import styles from '@/styles/index.module.css'
-import { PostList, DeepPost } from '@/components/posts'
+import { DeepPost, CompactPostList } from '@/components/posts'
 import RootLayout from './layout'
 import { promises as fs } from 'fs'
 import path from 'path'
@@ -39,7 +39,7 @@ export default function Home({ posts }: { posts: DeepPost[] }) {
         </header>
         <section className={styles.postsSection}>
           <h2>Recent News <Image src={CornerRightDown} alt='Corner right down' /></h2>
-          <PostList posts={posts} />
+          <CompactPostList posts={posts} />
         </section>
         <section id="about" className={styles.aboutSection}>
           <div className="layout">

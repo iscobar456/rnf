@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from './DonateButton.module.css'
 import { useRef } from 'react'
 import { CloseIcon } from '../icons';
@@ -23,7 +22,9 @@ export default function DonateButton() {
       <dialog className={styles.modalDialog} ref={dialogRef}>
         <div className={styles.header}>
           <h2>How To Donate</h2>
-          <button onClick={closeDialog} ><CloseIcon /></button>
+          <button onClick={closeDialog} >
+            <CloseIcon width={22} height={22} />
+          </button>
         </div>
         <p>
           We’re currently in the early stages of building our organization and are not yet registered as an official non-profit. If you're interested in supporting our work, please reach out directly to our finance director to arrange a donation or learn more about how your contribution will be used.
